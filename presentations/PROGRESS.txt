@@ -5,3 +5,7 @@ deck 10 part a done
 decks 1-10 done
 deck 11 part a done
 decks 1-11 done
+deck 12 part a done
+decks 1-12 done
+deck 13 part a done
+decks 1-13 done
