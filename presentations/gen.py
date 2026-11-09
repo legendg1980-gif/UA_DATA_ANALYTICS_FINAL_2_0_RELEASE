@@ -58,10 +58,12 @@ def fit_styles(n):
         t=d[f][0]
         if sid=='S07' and len(t)<=25: continue          # keep template 44pt when it fits
         r.append(_size(sid+'_t',30 if len(t)<=36 else 26))
+    # code box 649pt, 13pt mono: wraps after ~78 chars (render check, lesson 3)
+    if max(len(x) for x in d['code'][1])>74: r.append(_size('S09_b',12))
     for i,(a,_) in enumerate(d['three'],1):              # 210pt box: 11 chars at 30pt
         if len(a)>11: r.append(_size(f'S11_H{i}',26))
-    for i,(a,_) in enumerate(d['four'],1):               # 150pt box: 12 chars at 19pt
-        if len(a)>12: r.append(_size(f'S12_H{i}',17))
+    for i,(a,_) in enumerate(d['four'],1):               # 150pt box: 12 chars at 19pt touch the edge (render check) -> >11
+        if len(a)>11: r.append(_size(f'S12_H{i}',17))
     return r
 def deck(n):
     d=L[n]; m={}
