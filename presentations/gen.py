@@ -14,7 +14,7 @@ BULLETS=['S03_b','S06_b','S08_b','S14_b','S15_b','S16_b']
 def skeleton():
     req=[]
     for sid,src in reversed(ORDER):  # reverse so copies end in order after... we move later anyway
-        ids={P+src:sid}
+        ids={P+src:sid+'_pg'}  # slide IDs must be >=5 chars
         for e,r in ROLES.get(src,{}).items(): ids[P+e]=f'{sid}_{r}'
         req.append({'duplicateObject':{'objectId':P+src,'objectIds':ids}})
     for sid,src in ORDER:
@@ -29,9 +29,40 @@ def skeleton():
     pt=lambda n:{'magnitude':n,'unit':'PT'}
     req.append({'updateTextStyle':{'objectId':'S01_t','textRange':{'type':'ALL'},'style':{'fontSize':pt(36)},'fields':'fontSize'}})
     req.append({'updateTextStyle':{'objectId':'S04_b','textRange':{'type':'ALL'},'style':{'fontSize':pt(18)},'fields':'fontSize'}})
+    req+=template_fixes()
     for s in TEMPLATE_SLIDES: req.append({'deleteObject':{'objectId':P+s}})
-    for i,(sid,_) in enumerate(ORDER): req.append({'updateSlidesPosition':{'slideObjectIds':[sid],'insertionIndex':i}})
+    for i,(sid,_) in enumerate(ORDER): req.append({'updateSlidesPosition':{'slideObjectIds':[sid+'_pg'],'insertionIndex':i}})
     return req
+pt=lambda n:{'magnitude':n,'unit':'PT'}
+def _size(oid,n): return {'updateTextStyle':{'objectId':oid,'textRange':{'type':'ALL'},'style':{'fontSize':pt(n)},'fields':'fontSize'}}
+def template_fixes():
+    # template inconsistencies found on render check (2026-11-09):
+    # S07 first step label is 14pt regular while the other five are 16pt bold;
+    # S13 only the first column has bullets, but cols lines are wrapped phrases -> no bullets anywhere.
+    r=[{'updateTextStyle':{'objectId':'S07_L1','textRange':{'type':'ALL'},'style':{'fontSize':pt(16),'bold':True},'fields':'fontSize,bold'}},
+       {'deleteParagraphBullets':{'objectId':'S13_X1','textRange':{'type':'ALL'}}}]
+    return r
+def _lines(t,w):
+    n,cur=1,0
+    for word in t.split():
+        add=len(word)+(1 if cur else 0)
+        if cur+add>w: n+=1; cur=len(word)
+        else: cur+=add
+    return n
+def fit_styles(n):
+    # IBM Plex Mono: ~0.6em per char. Title boxes ~675-683pt wide -> 37 chars at 30pt, 43 at 26pt.
+    d=L[n]; r=[]
+    # cover title: 596pt box holds 2 lines; 27 chars/line at 36pt, 33 at 30pt
+    if _lines(d['title'],27)>2: r.append(_size('S01_t',30 if _lines(d['title'],33)<=2 else 26))
+    for sid,f in [('S06','c1'),('S08','c2'),('S09','code'),('S13','cols'),('S14','quiz'),('S15','hw'),('S16','res'),('S07','proc')]:
+        t=d[f][0]
+        if sid=='S07' and len(t)<=25: continue          # keep template 44pt when it fits
+        r.append(_size(sid+'_t',30 if len(t)<=36 else 26))
+    for i,(a,_) in enumerate(d['three'],1):              # 210pt box: 11 chars at 30pt
+        if len(a)>11: r.append(_size(f'S11_H{i}',26))
+    for i,(a,_) in enumerate(d['four'],1):               # 150pt box: 12 chars at 19pt
+        if len(a)>12: r.append(_size(f'S12_H{i}',17))
+    return r
 def deck(n):
     d=L[n]; m={}
     m['S01_t']=d['title']; m['S01_n']=f'Заняття {n}'
@@ -45,7 +76,8 @@ def deck(n):
     for i,(a,b) in enumerate(d['four'],1): m[f'S12_H{i}']=a; m[f'S12_X{i}']=b
     t,cols=d['cols']; m['S13_t']=t
     for i,(a,ls) in enumerate(cols,1): m[f'S13_H{i}']=a; m[f'S13_X{i}']='\n'.join(ls)
-    return [{'replaceAllText':{'containsText':{'text':'{{'+k+'}}'},'replaceText':v}} for k,v in m.items()]
+    return [{'replaceAllText':{'containsText':{'text':'{{'+k+'}}'},'replaceText':v}} for k,v in m.items()]+fit_styles(n)
 if __name__=='__main__':
     if sys.argv[1]=='skel': print(json.dumps(skeleton(),ensure_ascii=False))
+    elif sys.argv[1]=='fix': print(json.dumps(template_fixes(),ensure_ascii=False))  # for decks copied before the fix
     else: print(json.dumps(deck(int(sys.argv[1])),ensure_ascii=False,separators=(',',':')))
