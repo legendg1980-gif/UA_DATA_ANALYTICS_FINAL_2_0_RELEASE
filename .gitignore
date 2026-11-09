@@ -1,0 +1,6 @@
+~$*
+*.tmp
+.DS_Store
+Thumbs.db
+*.duckdb
+*.parquet

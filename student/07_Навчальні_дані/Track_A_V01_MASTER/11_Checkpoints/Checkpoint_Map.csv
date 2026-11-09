@@ -1,0 +1,4 @@
+﻿Checkpoint,AfterLesson,Focus,CriticalChecks
+CP1,5,Data preparation,Input/Accepted/Rejected; schema drift; duplicates
+CP2,11,Data model + SQL,Grain; joins; anti-join; current plan
+CP3,14,DAX + Power BI,Golden measures; filter behavior; drill-through

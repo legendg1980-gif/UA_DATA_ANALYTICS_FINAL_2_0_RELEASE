@@ -1,0 +1,2 @@
+Для відтворення генератора у поточному середовищі використовувалися Python, artifact_tool, ReportLab та Pillow.
+DuckDB/Parquet у цьому середовищі не були доступні; для них використовуйте 05_DuckDB/build_training_A_V01.sql на машині з DuckDB.

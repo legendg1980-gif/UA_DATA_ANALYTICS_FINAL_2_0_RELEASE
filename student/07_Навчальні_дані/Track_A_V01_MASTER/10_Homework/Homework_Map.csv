@@ -1,0 +1,15 @@
+﻿Homework,Topic,Input,Deliverable
+HW01,Карта процесу та grain,contracts sample + payments sample,Карта сутностей/подій/ключів
+HW02,Excel audit,contracts + lines,"Контрольні формули, дублі, типи"
+HW03,Data Quality Profile,dirty starter subset,Паспорт якості та журнал помилок
+HW04,XLSX ingestion,contracts/suppliers,Відтворюваний Power Query
+HW05,CSV ingestion,12 deliveries CSV,Folder pipeline + schema drift
+HW06,TXT/LOG parsing,warehouse/fixed-width/event log,Структуровані таблиці
+HW07,PDF extraction,8 acceptance PDF,Витяг + класифікація PDF
+HW08,Multi-source reconciliation,all source families,Plan/Delivery/Acceptance/Invoice/Payment
+HW09,Star schema,staging tables,Модель + паспорт grain
+HW10,SQL basic,staging exports,SELECT/GROUP BY/CASE/JOIN
+HW11,SQL reconciliation,staging exports,Anti-join/LAG/LEAD/ROW_NUMBER
+HW12,DAX measures,canonical mart,12 перевірених мір
+HW13,Power BI,canonical mart,Executive/Analysis/Detail
+HW14,Python QA,staging exports,Автоматичний QA report

@@ -1,0 +1,21 @@
+{
+  "seed": 20260813,
+  "variant": "A_V01_STARTER",
+  "primary_input_rows": 24719,
+  "primary_accepted_rows": 24550,
+  "primary_rejected_rows": 169,
+  "secondary_sources_excluded_from_primary_balance": [
+    "warehouse_movements.txt",
+    "legacy_deliveries_fixed_width.txt",
+    "historical_payments.csv.gz"
+  ],
+  "golden_amounts": {
+    "OriginalContractAmount": 148500000.0,
+    "CurrentContractAmount": 152350000.0,
+    "CurrentPlan": 139800000.0,
+    "Delivered": 112640000.0,
+    "Accepted": 108910000.0,
+    "Invoiced": 110240000.0,
+    "Paid": 101570000.0
+  }
+}

@@ -1,0 +1,379 @@
+ExceptionType,BusinessKey,ExpectedValue,ValidRecord,Interpretation
+PARTIAL_ACCEPTANCE,AC000001,8205.73,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000002,19045.41,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000003,31080.44,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000004,9319.58,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000005,24967.84,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000006,16301.53,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000007,19996.26,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000008,22223.96,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000009,7417.88,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000010,27738.89,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000011,24614.67,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000012,21897.96,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000013,13313.15,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000014,18746.57,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000015,5597.68,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000016,16084.18,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000017,8613.22,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000018,30265.42,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000019,26434.86,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000020,9373.9,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000021,7254.87,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000022,23881.15,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000023,26054.52,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000024,11737.44,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000025,24777.66,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000026,19561.57,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000027,29993.75,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000028,29097.23,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000029,24044.15,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000030,14100.98,True,Не видаляти; операційне відхилення
+PARTIAL_ACCEPTANCE,AC000031,18257.55,True,Не видаляти; операційне відхилення
+DELIVERY_DELAY_GT15,D000001,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000002,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000003,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000004,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000005,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000006,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000007,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000008,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000009,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000010,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000011,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000012,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000013,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000014,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000015,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000016,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000017,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000018,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000019,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000020,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000021,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000022,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000023,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000024,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000025,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000026,20,True,Прострочення поставки
+DELIVERY_DELAY_GT15,D000027,20,True,Прострочення поставки
+PARTIAL_PAYMENT,INV000101,77109.39,True,Часткова оплата
+PARTIAL_PAYMENT,INV000102,49902.06,True,Часткова оплата
+PARTIAL_PAYMENT,INV000103,38022.8,True,Часткова оплата
+PARTIAL_PAYMENT,INV000104,44441.43,True,Часткова оплата
+PARTIAL_PAYMENT,INV000105,46165.84,True,Часткова оплата
+PARTIAL_PAYMENT,INV000106,12539.87,True,Часткова оплата
+PARTIAL_PAYMENT,INV000107,63314.12,True,Часткова оплата
+PARTIAL_PAYMENT,INV000108,55362.69,True,Часткова оплата
+PARTIAL_PAYMENT,INV000109,5546.44,True,Часткова оплата
+PARTIAL_PAYMENT,INV000110,56608.09,True,Часткова оплата
+PARTIAL_PAYMENT,INV000111,64272.13,True,Часткова оплата
+PARTIAL_PAYMENT,INV000112,40896.81,True,Часткова оплата
+PARTIAL_PAYMENT,INV000113,85923.04,True,Часткова оплата
+PARTIAL_PAYMENT,INV000114,28059.55,True,Часткова оплата
+PARTIAL_PAYMENT,INV000115,54500.48,True,Часткова оплата
+PARTIAL_PAYMENT,INV000116,45878.44,True,Часткова оплата
+PARTIAL_PAYMENT,INV000117,67050.35,True,Часткова оплата
+PARTIAL_PAYMENT,INV000118,16180.29,True,Часткова оплата
+PARTIAL_PAYMENT,INV000119,59961.11,True,Часткова оплата
+PARTIAL_PAYMENT,INV000120,13785.28,True,Часткова оплата
+PARTIAL_PAYMENT,INV000121,6312.84,True,Часткова оплата
+PARTIAL_PAYMENT,INV000122,9761.66,True,Часткова оплата
+PARTIAL_PAYMENT,INV000123,72798.37,True,Часткова оплата
+PARTIAL_PAYMENT,INV000124,61110.71,True,Часткова оплата
+PARTIAL_PAYMENT,INV000125,89180.25,True,Часткова оплата
+PARTIAL_PAYMENT,INV000126,81995.22,True,Часткова оплата
+PARTIAL_PAYMENT,INV000127,45207.83,True,Часткова оплата
+PARTIAL_PAYMENT,INV000128,7366.64,True,Часткова оплата
+PARTIAL_PAYMENT,INV000129,5259.04,True,Часткова оплата
+PARTIAL_PAYMENT,INV000130,1235.41,True,Часткова оплата
+PARTIAL_PAYMENT,INV000131,37064.79,True,Часткова оплата
+PARTIAL_PAYMENT,INV000132,72223.57,True,Часткова оплата
+PARTIAL_PAYMENT,INV000133,35531.99,True,Часткова оплата
+PARTIAL_PAYMENT,INV000134,660.62,True,Часткова оплата
+PARTIAL_PAYMENT,INV000135,75672.39,True,Часткова оплата
+PARTIAL_PAYMENT,INV000136,37543.8,True,Часткова оплата
+PARTIAL_PAYMENT,INV000137,40322.01,True,Часткова оплата
+PARTIAL_PAYMENT,INV000138,6504.44,True,Часткова оплата
+PARTIAL_PAYMENT,INV000139,5259.04,True,Часткова оплата
+PARTIAL_PAYMENT,INV000140,52297.07,True,Часткова оплата
+PARTIAL_PAYMENT,INV000141,14264.28,True,Часткова оплата
+PARTIAL_PAYMENT,INV000142,70978.16,True,Часткова оплата
+PARTIAL_PAYMENT,INV000143,53063.48,True,Часткова оплата
+PARTIAL_PAYMENT,INV000144,54308.88,True,Часткова оплата
+PARTIAL_PAYMENT,INV000145,48081.85,True,Часткова оплата
+PARTIAL_PAYMENT,INV000146,74618.58,True,Часткова оплата
+PARTIAL_PAYMENT,INV000147,25089.73,True,Часткова оплата
+PARTIAL_PAYMENT,INV000148,2959.82,True,Часткова оплата
+PARTIAL_PAYMENT,INV000149,44537.23,True,Часткова оплата
+PARTIAL_PAYMENT,INV000150,82857.42,True,Часткова оплата
+PARTIAL_PAYMENT,INV000151,35531.98,True,Часткова оплата
+PARTIAL_PAYMENT,INV000152,53638.27,True,Часткова оплата
+PARTIAL_PAYMENT,INV000153,39459.8,True,Часткова оплата
+PARTIAL_PAYMENT,INV000154,83719.62,True,Часткова оплата
+PARTIAL_PAYMENT,INV000155,67816.74,True,Часткова оплата
+PARTIAL_PAYMENT,INV000156,44441.43,True,Часткова оплата
+PARTIAL_PAYMENT,INV000157,55171.08,True,Часткова оплата
+PARTIAL_PAYMENT,INV000158,49997.86,True,Часткова оплата
+PARTIAL_PAYMENT,INV000159,57949.29,True,Часткова оплата
+PARTIAL_PAYMENT,INV000160,38597.6,True,Часткова оплата
+PARTIAL_PAYMENT,INV000161,82953.22,True,Часткова оплата
+PARTIAL_PAYMENT,INV000162,90425.66,True,Часткова оплата
+PARTIAL_PAYMENT,INV000163,32178.96,True,Часткова оплата
+PARTIAL_PAYMENT,INV000164,56608.09,True,Часткова оплата
+PARTIAL_PAYMENT,INV000165,23940.13,True,Часткова оплата
+PARTIAL_PAYMENT,INV000166,50476.86,True,Часткова оплата
+PARTIAL_PAYMENT,INV000167,9857.46,True,Часткова оплата
+PARTIAL_PAYMENT,INV000168,65900.73,True,Часткова оплата
+PARTIAL_PAYMENT,INV000169,78833.8,True,Часткова оплата
+PARTIAL_PAYMENT,INV000170,2385.02,True,Часткова оплата
+PARTIAL_PAYMENT,INV000171,39555.6,True,Часткова оплата
+PARTIAL_PAYMENT,INV000172,31125.16,True,Часткова оплата
+PARTIAL_PAYMENT,INV000173,77588.39,True,Часткова оплата
+PARTIAL_PAYMENT,INV000174,83432.22,True,Часткова оплата
+PARTIAL_PAYMENT,INV000175,44824.63,True,Часткова оплата
+PARTIAL_PAYMENT,INV000176,852.21,True,Часткова оплата
+PARTIAL_PAYMENT,INV000177,50860.06,True,Часткова оплата
+PARTIAL_PAYMENT,INV000178,16946.69,True,Часткова оплата
+PARTIAL_PAYMENT,INV000179,72702.57,True,Часткова оплата
+PARTIAL_PAYMENT,INV000180,50189.46,True,Часткова оплата
+PARTIAL_PAYMENT,INV000181,59290.5,True,Часткова оплата
+PARTIAL_PAYMENT,INV000182,22311.52,True,Часткова оплата
+PARTIAL_PAYMENT,INV000183,39364.0,True,Часткова оплата
+PARTIAL_PAYMENT,INV000184,11486.06,True,Часткова оплата
+UNPAID_INVOICE,INV000001,60211.63,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000002,5093.41,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000003,43457.22,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000004,61163.59,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000005,87056.77,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000006,35080.01,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000007,29463.47,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000008,81249.84,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000009,37745.48,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000010,65256.99,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000011,69921.58,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000012,31557.77,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000013,51358.45,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000014,89531.86,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000015,89531.86,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000016,94482.02,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000017,32509.73,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000018,42886.04,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000019,16231.29,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000020,92197.33,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000021,37555.09,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000022,24894.09,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000023,94862.81,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000024,55927.83,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000025,83915.32,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000026,47360.23,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000027,70492.75,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000028,47074.65,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000029,85819.23,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000030,16612.07,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000031,24894.09,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000032,13851.4,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000033,47550.62,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000034,23085.37,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000035,58783.7,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000036,68493.64,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000037,70683.14,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000038,41934.09,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000039,31272.19,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000040,93815.66,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000041,88389.51,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000042,4427.04,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000043,48597.77,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000044,66113.75,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000045,46789.06,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000046,78679.57,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000047,74681.35,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000048,24894.09,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000049,34413.63,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000050,57831.73,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000051,34223.24,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000052,69635.98,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000053,24989.27,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000054,47741.0,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000055,55451.84,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000056,32795.31,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000057,29558.66,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000058,58402.91,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000059,15469.72,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000060,14041.78,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000061,63353.07,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000062,48121.79,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000063,18515.97,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000064,87818.33,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000065,70873.52,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000066,43837.99,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000067,75347.71,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000068,56403.8,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000069,50787.26,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000070,35651.17,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000071,40696.53,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000072,16992.85,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000073,40220.56,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000074,22038.21,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000075,21371.84,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000076,1761.56,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000077,87818.33,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000078,31176.98,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000079,67256.09,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000080,25274.86,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000081,47931.4,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000082,35936.76,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000083,52120.0,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000084,47550.61,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000085,72396.65,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000086,21181.45,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000087,76014.08,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000088,21657.43,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000089,15660.11,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000090,84772.07,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000091,80012.29,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000092,24037.32,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000093,95433.97,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000094,73063.02,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000095,64495.42,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000096,5759.77,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000097,69064.81,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000098,68874.41,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000099,49644.92,True,Неоплачений рахунок
+UNPAID_INVOICE,INV000100,27083.57,True,Неоплачений рахунок
+OVERPAYMENT,INV000185,2809.18,True,Оплата понад суму рахунку
+OVERPAYMENT,INV000186,6722.51,True,Оплата понад суму рахунку
+OVERPAYMENT,INV000187,16712.31,True,Оплата понад суму рахунку
+OVERPAYMENT,INV000188,7253.46,True,Оплата понад суму рахунку
+OVERPAYMENT,INV000189,6073.57,True,Оплата понад суму рахунку
+OVERPAYMENT,INV000190,1334.3,True,Оплата понад суму рахунку
+OVERPAYMENT,INV000191,12523.67,True,Оплата понад суму рахунку
+OVERPAYMENT,INV000192,20586.3,True,Оплата понад суму рахунку
+OVERPAYMENT,INV000193,15984.7,True,Оплата понад суму рахунку
+PLAN_DECREASED,C00061,,True,Зміна плану
+PLAN_DECREASED,C00027,,True,Зміна плану
+PLAN_DECREASED,C00063,,True,Зміна плану
+PLAN_DECREASED,C00019,,True,Зміна плану
+PLAN_DECREASED,C00071,,True,Зміна плану
+PLAN_DECREASED,C00032,,True,Зміна плану
+PLAN_DECREASED,C00054,,True,Зміна плану
+PLAN_DECREASED,C00070,,True,Зміна плану
+PLAN_DECREASED,C00066,,True,Зміна плану
+PLAN_DECREASED,C00012,,True,Зміна плану
+PLAN_DECREASED,C00014,,True,Зміна плану
+PLAN_DECREASED,C00053,,True,Зміна плану
+PLAN_DECREASED,C00017,,True,Зміна плану
+PLAN_DECREASED,C00036,,True,Зміна плану
+PLAN_DECREASED,C00060,,True,Зміна плану
+PLAN_DECREASED,C00067,,True,Зміна плану
+PLAN_DECREASED,C00051,,True,Зміна плану
+PLAN_DECREASED,C00069,,True,Зміна плану
+PLAN_DECREASED,C00018,,True,Зміна плану
+PLAN_DECREASED,C00010,,True,Зміна плану
+PLAN_DECREASED,C00056,,True,Зміна плану
+PLAN_DECREASED,C00025,,True,Зміна плану
+PLAN_DECREASED,C00068,,True,Зміна плану
+PLAN_DECREASED,C00007,,True,Зміна плану
+PLAN_DECREASED,C00011,,True,Зміна плану
+PLAN_DECREASED,C00003,,True,Зміна плану
+PLAN_DECREASED,C00016,,True,Зміна плану
+PLAN_DECREASED,C00026,,True,Зміна плану
+PLAN_DECREASED,C00024,,True,Зміна плану
+PLAN_DECREASED,C00028,,True,Зміна плану
+PLAN_DECREASED,C00045,,True,Зміна плану
+PLAN_DECREASED,C00029,,True,Зміна плану
+PLAN_DECREASED,C00049,,True,Зміна плану
+PLAN_DECREASED,C00055,,True,Зміна плану
+PLAN_DECREASED,C00021,,True,Зміна плану
+PLAN_DECREASED,C00002,,True,Зміна плану
+PLAN_DECREASED,C00046,,True,Зміна плану
+PLAN_DECREASED,C00064,,True,Зміна плану
+PLAN_DECREASED,C00020,,True,Зміна плану
+PLAN_DECREASED,C00005,,True,Зміна плану
+PLAN_DECREASED,C00006,,True,Зміна плану
+PLAN_DECREASED,C00023,,True,Зміна плану
+PLAN_DECREASED,C00035,,True,Зміна плану
+PLAN_DECREASED,C00073,,True,Зміна плану
+PLAN_DECREASED,C00004,,True,Зміна плану
+PLAN_DECREASED,C00041,,True,Зміна плану
+PLAN_DECREASED,C00039,,True,Зміна плану
+PLAN_DECREASED,C00048,,True,Зміна плану
+PLAN_DECREASED,C00042,,True,Зміна плану
+PLAN_DECREASED,C00058,,True,Зміна плану
+PLAN_DECREASED,C00030,,True,Зміна плану
+PLAN_DECREASED,C00037,,True,Зміна плану
+PLAN_DECREASED,C00013,,True,Зміна плану
+PLAN_DECREASED,C00040,,True,Зміна плану
+PLAN_DECREASED,C00065,,True,Зміна плану
+PLAN_DECREASED,C00034,,True,Зміна плану
+PLAN_DECREASED,C00043,,True,Зміна плану
+PLAN_DECREASED,C00044,,True,Зміна плану
+PLAN_DECREASED,C00057,,True,Зміна плану
+PLAN_DECREASED,C00047,,True,Зміна плану
+PLAN_DECREASED,C00008,,True,Зміна плану
+PLAN_DECREASED,C00074,,True,Зміна плану
+PLAN_DECREASED,C00031,,True,Зміна плану
+PLAN_DECREASED,C00062,,True,Зміна плану
+PLAN_DECREASED,C00015,,True,Зміна плану
+PLAN_DECREASED,C00033,,True,Зміна плану
+PLAN_DECREASED,C00001,,True,Зміна плану
+PLAN_DECREASED,C00022,,True,Зміна плану
+PLAN_DECREASED,C00072,,True,Зміна плану
+PLAN_DECREASED,C00038,,True,Зміна плану
+PLAN_DECREASED,C00050,,True,Зміна плану
+PLAN_DECREASED,C00059,,True,Зміна плану
+PLAN_DECREASED,C00052,,True,Зміна плану
+PLAN_DECREASED,C00009,,True,Зміна плану
+PLAN_INCREASED,C00314,,True,Зміна плану
+PLAN_INCREASED,C00303,,True,Зміна плану
+PLAN_INCREASED,C00343,,True,Зміна плану
+PLAN_INCREASED,C00077,,True,Зміна плану
+PLAN_INCREASED,C00337,,True,Зміна плану
+PLAN_INCREASED,C00344,,True,Зміна плану
+PLAN_INCREASED,C00341,,True,Зміна плану
+PLAN_INCREASED,C00323,,True,Зміна плану
+PLAN_INCREASED,C00076,,True,Зміна плану
+PLAN_INCREASED,C00336,,True,Зміна плану
+PLAN_INCREASED,C00345,,True,Зміна плану
+PLAN_INCREASED,C00347,,True,Зміна плану
+PLAN_INCREASED,C00301,,True,Зміна плану
+PLAN_INCREASED,C00330,,True,Зміна плану
+PLAN_INCREASED,C00313,,True,Зміна плану
+PLAN_INCREASED,C00079,,True,Зміна плану
+PLAN_INCREASED,C00327,,True,Зміна плану
+PLAN_INCREASED,C00305,,True,Зміна плану
+PLAN_INCREASED,C00075,,True,Зміна плану
+PLAN_INCREASED,C00307,,True,Зміна плану
+PLAN_INCREASED,C00326,,True,Зміна плану
+PLAN_INCREASED,C00315,,True,Зміна плану
+PLAN_INCREASED,C00080,,True,Зміна плану
+PLAN_INCREASED,C00319,,True,Зміна плану
+PLAN_INCREASED,C00333,,True,Зміна плану
+PLAN_INCREASED,C00317,,True,Зміна плану
+PLAN_INCREASED,C00309,,True,Зміна плану
+PLAN_INCREASED,C00318,,True,Зміна плану
+PLAN_INCREASED,C00306,,True,Зміна плану
+PLAN_INCREASED,C00302,,True,Зміна плану
+PLAN_INCREASED,C00331,,True,Зміна плану
+PLAN_INCREASED,C00321,,True,Зміна плану
+PLAN_INCREASED,C00342,,True,Зміна плану
+PLAN_INCREASED,C00346,,True,Зміна плану
+PLAN_INCREASED,C00078,,True,Зміна плану
+PLAN_INCREASED,C00304,,True,Зміна плану
+PLAN_INCREASED,C00311,,True,Зміна плану
+PLAN_INCREASED,C00322,,True,Зміна плану
+PLAN_INCREASED,C00308,,True,Зміна плану
+PLAN_INCREASED,C00334,,True,Зміна плану
+PLAN_INCREASED,C00329,,True,Зміна плану
+PLAN_INCREASED,C00324,,True,Зміна плану
+PLAN_INCREASED,C00328,,True,Зміна плану
+PLAN_INCREASED,C00332,,True,Зміна плану
+PLAN_INCREASED,C00340,,True,Зміна плану
+PLAN_INCREASED,C00316,,True,Зміна плану
+PLAN_INCREASED,C00338,,True,Зміна плану
+PLAN_INCREASED,C00310,,True,Зміна плану
+PLAN_INCREASED,C00339,,True,Зміна плану
+PLAN_INCREASED,C00325,,True,Зміна плану
+PLAN_INCREASED,C00312,,True,Зміна плану
+PLAN_INCREASED,C00320,,True,Зміна плану
+PLAN_INCREASED,C00335,,True,Зміна плану

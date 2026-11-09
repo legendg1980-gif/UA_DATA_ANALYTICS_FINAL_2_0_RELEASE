@@ -1,0 +1,45 @@
+TRACK A / V01 / STARTER - VALIDATION REPORT
+Status: PASS
+Seed: 20260813
+
+Primary ingestion balance:
+Input rows      24 719
+Accepted        24 550
+Rejected           169
+Check: 24 719 = 24 550 + 169  PASS
+
+Canonical counts:
+Items               180
+Suppliers current     96
+Supplier versions    114
+Contracts           1200
+Contract lines      3600
+Plan versions       1750
+Plan lines          5200
+Deliveries          4200
+Acceptance rows      760
+Invoices            1600
+Payments            2500
+Events              3300
+
+Golden amounts:
+Original contract amount  148 500 000.00
+Current contract amount   152 350 000.00
+Current plan              139 800 000.00
+Delivered                 112 640 000.00
+Accepted                  108 910 000.00
+Invoiced                  110 240 000.00
+Paid                      101 570 000.00
+
+Reconciliation:
+Plan - Delivered            27 160 000.00
+Delivered - Accepted         3 730 000.00
+Invoice - Paid               8 670 000.00
+
+Visual verification:
+- XLSX header/date/amount formatting checked on contracts_2026_H1.xlsx.
+- Digital PDF rendered and checked.
+- Scanned PDF rendered as 3 image-only pages and checked.
+
+Note:
+warehouse_movements.txt, legacy_deliveries_fixed_width.txt and historical_payments.csv.gz are secondary/training-scale sources and are not included in the 24 719-row primary ingestion balance.

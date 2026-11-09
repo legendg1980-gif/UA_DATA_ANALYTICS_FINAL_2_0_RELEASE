@@ -1,0 +1,7 @@
+Fixed-width specification:
+1-7 DeliveryID
+8-15 ContractID
+16-23 ItemID
+24-33 Date YYYYMMDD
+34-39 Quantity
+42-53 Amount in cents

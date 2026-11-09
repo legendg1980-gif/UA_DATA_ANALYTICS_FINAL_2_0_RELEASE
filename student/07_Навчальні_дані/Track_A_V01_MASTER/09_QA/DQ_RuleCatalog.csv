@@ -1,0 +1,21 @@
+﻿RuleID,RuleName,TargetTable,TargetField,RuleType,Severity,IsCritical
+DQ001,ContractID not null,DimContract,ContractID,NOT_NULL,Critical,True
+DQ002,Contract unique,DimContract,ContractID,UNIQUE,Critical,True
+DQ003,Supplier exists,DimContract,SupplierID,REFERENCE,Critical,True
+DQ004,StartDate <= EndDate,DimContract,StartDate/EndDate,DATE_SEQUENCE,Critical,True
+DQ005,Item exists,FactContractLine,ItemID,REFERENCE,Critical,True
+DQ006,Quantity > 0,FactContractLine,OrderedQuantity,RANGE,Critical,True
+DQ007,Line amount reconciles,FactContractLine,LineAmount,RECONCILIATION,Critical,True
+DQ008,One current plan version,DeliveryPlanVersion,IsCurrent,VERSION,Critical,True
+DQ009,Plan line references contract line,FactDeliveryPlan,ContractLineID,REFERENCE,Critical,True
+DQ010,Delivery ID unique,FactDelivery,DeliveryID,UNIQUE,Critical,True
+DQ011,Delivery contract exists,FactDelivery,ContractID,REFERENCE,Critical,True
+DQ012,Delivery item exists,FactDelivery,ItemID,REFERENCE,Critical,True
+DQ013,Delivery quantity > 0,FactDelivery,Quantity,RANGE,Critical,True
+DQ014,Acceptance balance,FactAcceptance,Quantity,BALANCE,Critical,True
+DQ015,Invoice ID unique,FactInvoice,InvoiceID,UNIQUE,Critical,True
+DQ016,DueDate >= InvoiceDate,FactInvoice,DueDate,DATE_SEQUENCE,Critical,True
+DQ017,Payment ID unique,FactPayment,PaymentID,UNIQUE,Critical,True
+DQ018,Payment invoice exists,FactPayment,InvoiceID,REFERENCE,Critical,True
+DQ019,Payment amount > 0,FactPayment,PaymentAmount,RANGE,Critical,True
+DQ020,Event log syntax valid,FactContractEvent,EventTimestamp,FORMAT,Critical,True
