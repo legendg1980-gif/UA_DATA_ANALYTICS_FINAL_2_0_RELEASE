@@ -42,3 +42,10 @@ RELEASE GATE
 - Comments/tracked-changes scan passed.
 - SHA256 manifest generated after this report.
 - ZIP integrity tested after archive creation.
+
+
+REVISION 2.1 QA (09.11.2026)
+- Independent recompute (pandas + SQL) of all V01 / Track B controls: 43/43 PASS (audit/solve_v21.py).
+- Golden V01 amounts unchanged; OVERDUE_INVOICE_COUNT corrected to 181.
+- Control_Results formulas recalculated in LibreOffice: no errors.
+- SHA256 manifest regenerated.

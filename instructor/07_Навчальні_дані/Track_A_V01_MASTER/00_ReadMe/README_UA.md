@@ -29,7 +29,7 @@ XLSX, CSV, TXT, fixed-width TXT, LOG, digital PDF, semi-structured PDF, scanned 
 У поточному середовищі генерації бібліотека DuckDB недоступна, тому пакет містить готові staging CSV та скрипт 05_DuckDB/build_training_A_V01.sql. На машині з DuckDB виконайте build_training_A_V01.bat або CLI-команду з коментаря у SQL-файлі. Скрипт створить training_A_V01.duckdb і historical_payments.parquet.
 
 ## Для викладача
-Instructor/ містить canonical truth, SQLite fallback, defect manifest, business exceptions та expected results. Цю папку не треба видавати слухачам.
+99_Instructor_only/V01_Instructor/ містить canonical truth, SQLite fallback, defect manifest, business exceptions та expected results. Цю папку не треба видавати слухачам.
 
 ## Важливо
 Усі назви, організації, постачальники, документи та суми синтетичні. Набір не містить реальних оборонних або персональних даних.

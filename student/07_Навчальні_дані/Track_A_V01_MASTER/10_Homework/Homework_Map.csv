@@ -1,15 +1,9 @@
-﻿Homework,Topic,Input,Deliverable
-HW01,Карта процесу та grain,contracts sample + payments sample,Карта сутностей/подій/ключів
-HW02,Excel audit,contracts + lines,"Контрольні формули, дублі, типи"
-HW03,Data Quality Profile,dirty starter subset,Паспорт якості та журнал помилок
-HW04,XLSX ingestion,contracts/suppliers,Відтворюваний Power Query
-HW05,CSV ingestion,12 deliveries CSV,Folder pipeline + schema drift
-HW06,TXT/LOG parsing,warehouse/fixed-width/event log,Структуровані таблиці
-HW07,PDF extraction,8 acceptance PDF,Витяг + класифікація PDF
-HW08,Multi-source reconciliation,all source families,Plan/Delivery/Acceptance/Invoice/Payment
-HW09,Star schema,staging tables,Модель + паспорт grain
-HW10,SQL basic,staging exports,SELECT/GROUP BY/CASE/JOIN
-HW11,SQL reconciliation,staging exports,Anti-join/LAG/LEAD/ROW_NUMBER
-HW12,DAX measures,canonical mart,12 перевірених мір
-HW13,Power BI,canonical mart,Executive/Analysis/Detail
-HW14,Python QA,staging exports,Автоматичний QA report
+﻿Homework,AfterLesson,Topic,Input,Deliverable
+HW01,2,Карта процесу + Excel audit,Exercises/EX02_V01_dirty_register_800.xlsx,"Process map, clean workbook, ErrorLog, control sum"
+HW02,3,Data Quality Passport,Track A 01_Source / Track B,"DQ Passport, Deviation log, 10-row sample"
+HW03,4,Power Query Folder 12→13,Deliveries 12 CSV + ADD_AFTER_DEMO / Track B issues,"PQ query, RejectedFiles, Refresh log"
+HW04,6,Normalization + Merge + Anti-join,all source families,"Mapping table, anti-join result, reconciliation control"
+HW05,8,Plan-fact + Star schema,Plan v1-v3 + deliveries / need_plan,"Plan-fact deltas, model diagram, grain passport"
+HW06,10,SQL + DAX reconciliation,04_STAGING (Release 2),"SQL file, DAX measures, SQL/PQ/DAX table, 5 KPI passports"
+HW07,12,Time metrics + 2 BI pages,model,"Executive + Analytical pages, scenarios"
+HW08,14,Profile + Exceptions + QA + note,model,"Profile page, Exception Register, checklist, 5 test cases, 1-page note"

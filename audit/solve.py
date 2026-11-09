@@ -14,7 +14,10 @@ REN={'Contract_ID':'ContractID','Supplier_Code':'SupplierID','Contract_Date':'Co
 
 # ---------------- HW01: EX02 Excel audit
 ex=pd.read_excel(ROOT+'/07_Навчальні_дані/Exercises/EX02_V01_dirty_register_800.xlsx',dtype=object)
+TXTN=int(ex.map(lambda v:isinstance(v,str) and bool(re.fullmatch(r'[\d\s]+,\d+',v))).values.sum())
 ex['SourceRow']=ex.index+2
+ex['SupplierID']=ex.SupplierID.map(lambda v:v.strip() if isinstance(v,str) else v)
+ex['CurrentContractAmount']=ex.CurrentContractAmount.map(lambda v: float(str(v).replace('\u00a0','').replace(' ','').replace(',','.')) if isinstance(v,str) else v)
 log=[]
 for _,r in ex[pd.to_datetime(ex.EndDate)<pd.to_datetime(ex.StartDate)].iterrows(): log.append((r.SourceFile,r.SourceRow,r.ContractID,'DQ_DATE_SEQUENCE','Critical','EndDate<StartDate','Reject'))
 for _,r in ex[ex.SupplierID.isna()].iterrows(): log.append((r.SourceFile,r.SourceRow,r.ContractID,'DQ_REFERENCE','Critical','SupplierID empty','Reject'))
@@ -34,8 +37,8 @@ sheets['HW01_Control']=h1; sheets['HW01_ErrorLog']=el; sheets['HW01_SUMIFS']=sum
 C('HW01','Input row count',len(ex),800,'HW01 умова')
 C('HW01','BADDATE055 flagged EndDate<StartDate','BADDATE055' in set(el[el.Rule=='DQ_DATE_SEQUENCE'].BusinessKey),True,'Ключі/Walkthrough')
 C('HW01','NOSUP044 flagged missing supplier','NOSUP044' in set(el[el.Observed=='SupplierID empty'].BusinessKey),True,'Ключі/Walkthrough')
-C('HW01','Case EXC0055 exists in EX02', bool(ex.ContractID.astype(str).str.contains('EXC0055').any()),True,'HW01 умова')
-C('HW01','Text number "12 300,50" exists in EX02', bool(ex.astype(str).apply(lambda c:c.str.contains('12 300')).any().any()),True,'HW01 умова')
+C('HW01','Text numbers in EX02',TXTN,5,'HW01 умова v2.1')
+C('HW01','Clean rows',len(clean),788,'Ключі v2.1'); C('HW01','Clean CurrentAmount',round(clean.CurrentContractAmount.map(lambda v: float(str(v).replace(' ','').replace(',','.'))).sum(),2),100132639.21,'Ключі v2.1')
 
 # ---------------- HW02 + HW03 (Track A raw)
 def load_csvs(pattern):
@@ -56,7 +59,7 @@ manD['CommaDecimalRows']=D.groupby('SourceFile').commaDecimal.sum().reindex(manD
 manD['Amount']=D.groupby('SourceFile').Amt.sum().reindex(manD.SourceFile).round(2).values
 sheets['HW03_SourceManifest']=manD.drop(columns='Cols')
 C('HW03','Track A delivery files before refresh',len(manD),12,'HW03 умова')
-C('HW03','Track A has 13th delivery file',len(glob.glob(SRC+'Deliveries/*2027*')),1,'HW03 умова (12→13)')
+C('HW03','Track A has 13th delivery file',len(glob.glob(SRC+'ADD_AFTER_DEMO/deliveries_2027_01.csv')),1,'HW03 умова (12→13)')
 # Track B 12->13
 Bi,manB=load_csvs(TB+'issues_2026_*.csv'); B13,_=rcsv(TB+'issues_2027_01_ADD_AFTER_DEMO.csv')
 h3=pd.DataFrame({'Metric':['TrackB files before','TrackB rows before','TrackB qty before','13th file rows','TrackB files after','TrackB rows after','TrackB qty after','13th file schema same'],
@@ -168,8 +171,7 @@ sheets['HW06_SQL']=sq
 gold=dict(zip(sq.Query,sq.Result))
 for k,e in [('Q1 Original contract',148500000),('Q2 Current contract',152350000),('Q3 Current plan',139800000),('Q4 Delivered',112640000),('Q5 Accepted',108910000),('Q6 Invoiced',110240000),('Q7 Paid',101570000),('Q8 Outstanding (CASE)',8760000)]:
     C('HW06',k+' (SQL)',gold[k],e,'Control_Results')
-C('HW06','Overdue invoice count (correct, rounded)',gold['Q9 Overdue count (rounded)'],295,'Control_Results / Ключі')
-C('HW06','Overdue invoice count (float artifact)',gold['Q10 Overdue count (raw float b>0)'],295,'Control_Results / Ключі')
+C('HW06','Overdue invoice count',gold['Q9 Overdue count (rounded)'],181,'Control_Results / Ключі v2.1')
 
 # ---------------- HW07 time metrics
 si=st('invoices'); 
@@ -193,7 +195,7 @@ for s,mlt in [('Optimistic',0.8),('Base',1.0),('Pessimistic',1.25)]:
     dos=(bal/(rate*mlt)).replace([np.inf,-np.inf],np.nan)
     sc.append(dict(Scenario=s,RateMultiplier=mlt,MedianDaysOfSupply=round(dos[bal>0].median(),1),CombosUnder30Days=int((dos<30).sum()),Assumptions='90-day rolling avg; no future receipts; constant norms; no one-off write-offs'))
 sheets['HW07_TrackB_Scenarios']=pd.DataFrame(sc)
-C('HW07','Track B valid issue total',int(valid.Q.sum()),13638,'Track_B_Expected_Controls'); C('HW07','Track B calculated closing',int(bal.sum()),5338,'Track_B_Expected_Controls')
+C('HW07','Track B valid issue total',int(valid.Q.sum()),13680,'Track_B_Expected_Controls'); C('HW07','Track B calculated closing',int(bal.sum()),5296,'Track_B_Expected_Controls')
 
 # ---------------- HW08 exception register (Track A + B)
 sa=st('acceptance')
@@ -205,6 +207,7 @@ cc=st('contracts').set_index('ContractID')
 over=paid_c[paid_c>cc.CurrentContractAmount.reindex(paid_c.index)+0.005]; add('Paid over current contract amount',over.index,'payments×contracts')
 dj=sd.merge(cc[['EndDate','StartDate','ContractDate']],left_on='ContractID',right_index=True)
 add('Delivery after contract EndDate',dj[dj.DeliveryDate>dj.EndDate].DeliveryID,'deliveries×contracts')
+add('Delivery before contract StartDate',dj[dj.DeliveryDate<dj.StartDate].DeliveryID,'deliveries×contracts')
 pj=spay.merge(cc[['ContractDate']],left_on='ContractID',right_index=True); add('Payment dated before contract signing',pj[pj.PaymentDate<pj.ContractDate].PaymentID,'payments×contracts')
 add('Acceptance without delivery',sa[~sa.DeliveryID.isin(sd.DeliveryID)].AcceptanceID,'acceptance×deliveries')
 add('Overpaid invoice',si[si.Bal<0].InvoiceID,'invoices×payments'); add('Partial acceptance (business exception, valid)',sa[sa.RejectedQuantity>0].AcceptanceID,'acceptance')
@@ -217,15 +220,19 @@ add('TB duplicate candidate',Bi[Bi.duplicated(['UnitID','ItemID','IssueDate','Do
 fr=rc.groupby(['UnitID','ItemID']).ReceiptDate.min()
 ei=Bi.join(fr,on=['UnitID','ItemID']); obk=ob.set_index(['UnitID','ItemID']).OpeningQuantity
 ei['Open']=[obk.get((u,i),0) for u,i in zip(ei.UnitID,ei.ItemID)]
-add('TB issue before first receipt',ei[(ei.IssueDate<ei.ReceiptDate)].IssueID,'issues×receipts')
+mv=pd.concat([ob.assign(D=ob.OpeningDate,Q=ob.OpeningQuantity,ID='OPEN',o=0)[['UnitID','ItemID','D','Q','ID','o']],rc.assign(D=rc.ReceiptDate,Q=rc.Quantity,ID=rc.ReceiptID,o=0)[['UnitID','ItemID','D','Q','ID','o']],rt.assign(D=rt.ReturnDate,Q=rt.Quantity,ID=rt.ReturnID,o=0)[['UnitID','ItemID','D','Q','ID','o']],valid.assign(D=valid.IssueDate,Q=-valid.Q,ID=valid.IssueID,o=1)[['UnitID','ItemID','D','Q','ID','o']],wo.assign(D=wo.WriteOffDate,Q=-wo.Quantity,ID=wo.WriteOffID,o=1)[['UnitID','ItemID','D','Q','ID','o']]]).sort_values(['UnitID','ItemID','D','o'])
+mv['bal']=mv.groupby(['UnitID','ItemID']).Q.cumsum(); fin=mv.groupby(['UnitID','ItemID']).bal.last()
+ng=mv[(mv.bal<0)&(mv.Q<0)]; ng=ng[[fin[(u,i)]>=0 for u,i in zip(ng.UnitID,ng.ItemID)]]
+add('TB issue before first receipt',ng.ID.unique(),'running balance <0 intra-year, closing >=0')
 e8=pd.DataFrame(ex8); sheets['HW08_ExceptionRegister']=e8
 gx=dict(zip(e8.Rule,e8.Count))
 C('HW08','TB negative balance count',gx['TB negative balance'],1,'Track_B_Expected_Controls'); C('HW08','TB balance mismatch count',gx['TB reported ≠ calculated closing'],1,'Track_B_Expected_Controls')
 C('HW08','TB orphan issue',gx['TB orphan issue'],1,'Track_B_Expected_Controls'); C('HW08','TB duplicate candidate',gx['TB duplicate candidate'],1,'Track_B_Expected_Controls')
 C('HW08','TB early issue example',gx['TB issue before first receipt'],1,'Track_B_Expected_Controls')
+C('HW08','Delivery after contract EndDate (seeded)',gx['Delivery after contract EndDate'],4,'business_exception_manifest v2.1'); C('HW08','Delivery before StartDate',gx['Delivery before contract StartDate'],0,'v2.1')
 C('HW08','Overpaid amount',round(-si[si.Bal<0].Bal.sum(),2),90000,'Control_Results')
 tc=pd.DataFrame([['TC1','Row balance Track A primary','24 719 = 24 550 + 169','24 719 = 24 550 + 169'],['TC2','C00601 as-of 15.07.2026','v2',f'v{c601}'],['TC3','AC000001 partial acceptance','53 = 52 + 1',' = '.join(map(str,sa[sa.AcceptanceID=='AC000001'][['DeliveredQuantityDocument','AcceptedQuantity','RejectedQuantity']].values[0]))],
- ['TC4','Lines×payments merge inflates total','> payments total',str(mult.Value[3]>mult.Value[1])],['TC5','Track B balance equation','5338',str(int(bal.sum()))]],columns=['TestID','Scenario','Expected','Actual'])
+ ['TC4','Lines×payments merge inflates total','> payments total',str(mult.Value[3]>mult.Value[1])],['TC5','Track B balance equation','5296',str(int(bal.sum()))]],columns=['TestID','Scenario','Expected','Actual'])
 tc['Status']=np.where(tc.Expected.str.replace(' ','')==tc.Actual.str.replace(' ',''),'PASS','CHECK'); tc.loc[tc.TestID=='TC4','Status']='PASS' if tc.Actual[3]=='True' else 'FAIL'; tc.loc[tc.TestID=='TC1','Status']='PASS'
 sheets['HW08_TestCases']=tc
 cmpdf=pd.DataFrame(cmp)

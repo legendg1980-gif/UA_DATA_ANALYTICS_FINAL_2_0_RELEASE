@@ -1,4 +1,4 @@
-UA_DATA_ANALYTICS_FINAL_2.0
+UA_DATA_ANALYTICS_FINAL_2.0 — ревізія 2.1 (див. CHANGELOG_2_1.txt)
 
 ЩО ЦЕ
 Це наш попередній MASTER-курс, перекомпонований під вимоги наданої програми:

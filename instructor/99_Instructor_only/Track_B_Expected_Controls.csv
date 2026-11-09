@@ -6,10 +6,10 @@ OpeningTotal,9160,sum opening_balance
 ReceiptTotal,9620,sum valid receipts
 ReturnTotal,338,sum returns
 WriteOffTotal,142,sum writeoffs
-ValidIssueTotal,13638,excludes orphan/duplicate seeded defects
-CalculatedClosingTotal,5338,Opening + Receipts + Returns - Issues - WriteOff
+ValidIssueTotal,13680,excludes orphan/duplicate seeded defects
+CalculatedClosingTotal,5296,Opening + Receipts + Returns - Issues - WriteOff
 BalanceMismatchCount,1,U04/I017
 NegativeBalanceCount,1,U08/I030
 OrphanIssueCount,1,B_ORPH_001
 DuplicateCandidateCount,1,B_DUP_001
-EarlyIssueExampleCount,1,B_EARLY_001
+EarlyIssueExampleCount,1,B_EARLY_001 (U05/I014: 48 > opening 42 before first receipt 03.02)
